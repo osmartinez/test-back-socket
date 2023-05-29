@@ -25,6 +25,9 @@ app.get("/", (req,res)=>{
     `)
 })
 
+app.use(express.static("public"))
+
+
 io.of("/stream").on("connection",stream)
 
 server.listen(3000,"0.0.0.0")
